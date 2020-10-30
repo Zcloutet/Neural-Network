@@ -16,8 +16,8 @@ public class Network {
         ArrayList<List<Double>> test_set = new ArrayList<List<Double>>();
         
         //my path for csv files
-        File file = new File("C:/Users/zclou/Desktop/CSC 475/NN/mnist_train.csv");
-        File file1 = new File("C:/Users/zclou/Desktop/CSC 475/NN/mnist_test.csv");
+        File file = new File("mnist_train.csv");
+        File file1 = new File("mnist_test.csv");
         import_csv(set,file);
         import_csv(test_set,file1);
 
@@ -108,7 +108,7 @@ public class Network {
         try{
             String token = in.nextLine();
             PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(token)));
-            //PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("C:/Users/zclou/Desktop/CSC 475/NN/weight.txt")));
+           
             for (int i=0; i<10; i++){
                 for(int j=0; j<30; j++){
                     out.println(fin_neuron.get(i).get(1).get(j));
